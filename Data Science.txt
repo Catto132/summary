@@ -266,6 +266,44 @@ Data visualiziton.
 count 		นับrecord 
 countdistint	นับrecord ไม่สนค่าซ้ำ
 data scientist ทำหน้าที่เตรียมข้อมูลที่ดีที่สุดให้แก่คอมพิวเตอร์
+garbage in garbage out ขยะเข้าขยะออก คือ ถ้าข้อมูลไม่ดีไม่ว่าระบบจะออกแบบมาดีขนาดใหนก็จะได้ผลลัพท์ที่ได้ก็จะไม่ดี
+
+machien learning
+	อะไรคือ neural network
+		artificial Neural Networks (ANNs) เลียนแบบ สมองของมนุษย์ผ่านกลุ่มของ algorithms ระบบแบบเบสิคมักจะประกอบด้วย 
+		-inputs (ข้อมูล)		} input layer 
+		-weights ()			} hidden layer
+		-bias or threshold ()	} hidden layer
+		-output (ผลลัพท์)		} output layer
+
+	deep learning ต่างจากneural networkอย่างไร
+		neural network จะมีความซับซ้อนมากกว่า deep learning 
+		เพราะว่าdeep learning ต้องใช้ข้อมูลที่มีแบบแผนโดยที่ต้องมีมนุษย์มาร่วมหรือตรวจสอบ แต่ neural network สามารถประมวลผลข้อมูลที่ไม่เป็นแบบแผนได้
+
+	machine learning method
+		-Supervised machien learning.
+		-UNsupervised machine laerning.
+		-semi-supervised learning.
+		-Reinforce learning.
+
+	common machine learning algorithm
+		Neural network.
+		Linear regression.
+		Logistic regression.
+		Clustering. จับกลุ่มข้อมูล
+		Decision Tree.  
+		Random Forest.
+	
+	challenge of machine learning.
+		-Technological singularity.
+		-AI impact on jobs.
+		-Privacy 
+		-Bias and discrimination.
+		-Accountability.
+
+
+
+
 ข้อสอบ 
 	ข้อสุดท้าย data visualization
 	
