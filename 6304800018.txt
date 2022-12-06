@@ -1,0 +1,6 @@
+			pikachu	pooh
+Accuracy: 		90%		87%
+Precision: 	93.48%	94%
+Recall: 		86%
+F1 score:		93%		90%
+

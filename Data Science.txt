@@ -1,0 +1,276 @@
+
+  _____        _           _____      _                     
+ |  __ \      | |         / ____|    (_)                    
+ | |  | | __ _| |_ __ _  | (___   ___ _  ___ _ __   ___ ___ 
+ | |  | |/ _` | __/ _` |  \___ \ / __| |/ _ \ '_ \ / __/ _ \
+ | |__| | (_| | || (_| |  ____) | (__| |  __/ | | | (_|  __/
+ |_____/ \__,_|\__\__,_| |_____/ \___|_|\___|_| |_|\___\___|
+                                                            
+                                                            
+วิทยาการข้อมูล
+อังคาร 0900-1200
+--------------------------------------------------------------------------------------------------------------------------------
+
+1.หลักการวิทยาการกับอาชีพ ประยุกต์ใช้กับงานไรได้บ้าง 
+
+  Data Science หมายถึง การนำข้อมูลมาใช้ประโยชน์ 
+
+ โดยครอบคลุมตั้งแต่ขั้นตอนการเก็บข้อมูล (Collect) > 
+    การเก็บข้อมูลหรือหาข้อมูลที่ต้องการเพื่อใช้ในการตำนวณ
+
+ การจัดการข้อมูล (Manage) >  
+    เราต้องนำข้อมูลมาผ่านการแปรรูปให้นำมาใช้ต่อได้ง่าย หรือเราเรียกขั้นตอนนี้ว่า “การทำความสะอาดข้อมูล” หรือ Data Wrangling / Data Cleaning นั่นเอง 
+    ซึ่งขั้นตอนนี้กินเวลาเยอะที่สุดในการทำ Data Science เลยก็ว่าได้ครับ
+
+ การวิเคราะห์ข้อมูล (Analyze) > 
+  นำข้อมูลมาวิเคราะห์เพื่อหาสิ่งที่น่าสนใจในข้อมูลครับ ซึ่งขั้นอยู่กับว่าโจทย์ที่ต้องการแก้ไขคืออะไร ผมคิดว่าเราแบ่งได้เป็น 2 โจทย์หลัก ๆ ในการวิเคราะห์ดังนี้
+  -Finding insights – วิเคราะห์เพื่อหาสิ่งที่ซ่อนอยู่ในข้อมูล สำหรับนำมาใช้ตัดสินใจเรื่องต่าง ๆ ในธุรกิจ เช่น 
+   ยอดขายกางเกงยีนส์เดือนธันวาคมของ 5 ปีที่ผ่านมาสูงกว่าสินค้าอื่น ๆ อย่างมาก เราก็สามารถปรับแผน Marketing ให้เหมาะสมได้
+  -Modelling – วิเคราะห์เพื่อหา Pattern ที่ซ่อนอยู่ในข้อมูล และพยายามสร้าง Model เลียนแบบหน้าตาของข้อมูล
+   ออกมาให้เหมือนที่สุด สำหรับนำมาใช้ทำนายผล เช่น เราพบว่ายอดขายของไอศกรีมมีความสัมพันธ์เป็นเส้นตรงเมื่อเทียบกับอุณหภูมิเฉลี่ยในแต่ละวัน 
+   เราก็สามารถจัดโปรโมชั่นพิเศษในช่วงที่อากาศหนาวเพื่อดึงดูดลูกค้าเพิ่มขึ้นได้
+
+  ไปจนถึงขั้นตอนการนำข้อมูลมาช่วยตัดสินใจ (Decision)
+  ขั้นตอนนี้ เราที่ทำงาน Data Science มีหน้าที่สรุปผลวิเคราะห์ให้เข้าใจง่าย ๆ เพื่อนำไปเสนอผู้ร่วมงาน
+
+   ประยุกต์ใช้ได้ ทั้งการคาดการณ์เหตุการณ์ในอนาคต, การหาความสัมพันธ์ทางธุรกิจ, การจัดโมเดลธุรกิจ, การจัดสินค้า
+
+2.missing data dropna() อธิบาย
+3.ไม่ต้องท่องคำสั่ง python data preparation ex.คำสั่ง missing remove ออกไป เน้นหลักการ
+   
+ PANDAS :
+	read_csv()	: import csv file from specified path.
+	EXAMPLE : data = pd.read_csv("C:\\Users\\user\\OneDrive\\เอกสาร\\dev\\python folder\\data_sci_NaN_value\\Nan\\titanic.csv", header=0, sep=",")
+	
+	rename()	: Rename column.
+	EXAMPLE : data.rename(columns={"sex":"gender"}) #rename column sex to gender.
+
+	isNull() 	: Detech missing value.
+	sum()	   	: Count value.
+	EXAMPLE : print(data.isnull().sum()) #Find missing value and print sum of missing value.
+
+	fillna()	: Fill missing value.
+	EXAMPLE : df1[['age']] = df1[['age']].fillna(df1.age.mode()[0]) #Fill missing value in column age with mode value calculate from missing column age.
+
+	map()		: Format value.
+	EXAMPLE : df1['gender'] = df1['gender'].map({'male': 1,'female': 0}) #Format value if value in column gender is male format it to 1 if female format it to female.
+	
+	head() 	: Show 5 first index. can specific row. 
+	EXAMPLE : print(df1.head(51)) #Show first 51 row of dataframe1
+
+
+
+---------------08/11/65----------------------------------------------------------------------------------------------
+Linear regression
+Regression is used when you try to find relationship between variable.
+**use a lot in machine learning**
+	
+--------------09/11/65-----------------------------------------------------------------------------------------------
+
++--------------------------+
+|  Data Science 			|
+|  ทำงานตามข้อมูลที่มี *ไม่ใช่งานกลุ่ม*	|
++--------------------------+
+|	mcdonale group		|
+|		-ฟอร์ด			|
+|		-เตอร์			|
+|		-เพลง			|
+|		-บูม			|
+|		-บิว			|
++--------------------------+
+|	retail			|
+|		-พี่ก้อง			|
+|		-โบท			|
+|		-ฟิวแว่น			|
+|		-earth		|
++--------------------------+
+|	netflix			|
+|		-พี่เกีย			|
+|		-แบงค์			|
+|		-ฟิว			|
+|		-พลอย			|
+|		-ธาดา			|
++--------------------------+
+|	assignment 		|
+|	-clean data(ต้องอธิบาย)	|
+|	-อยากรู้อะไรจากดาต้านี้		|
++--------------------------+
+
+--------------------15/11/65-----------------------------------------------------------------------------------------
+Web Scrapping
+use web scrapper.io extension in chrome
+
+ทำไมต้องใช้ web scrapping 
+	ใช้เพื่อหาข้อมูลของ/ลูกค้าคู่เเข่งหรือระบบใดระบบหนึ่ง เพื่อใช้ในการวิเคราะห์,คาดการณ์หรือทำความเข้าใจลูกค้า/คู่แข่ง
+
+การทำ web scrapping คืออะไร
+	การดึงข้อมูลออกมาจากเว็บไซต์ มักจะหมายถึงการใช้โปรแกรมอัตโนมัติที่จำลองการใช้งานของผู้ใช้ 
+	โดยมีขั้นตอนเกี่ยวข้องกับการดาวน์โหลดหน้าเว็บเพจ แยกข้อความและดึงข้อมูลออกมาเพื่อหาข้อมูลเป้าหมายในรูปแบบที่ถูกต้อง
+
+ethic
+ 	-Always check website Term and Conditions.
+	-publishing the scraped data might violate copyright laws.
+	-act like a human - make request at a reasonable rate.
+	-check teh robots.txt file.
+
+robots.txt EXAMPLE:
+	+-------------------------------------+
+	|							|
+	|	user-agent: Google			|
+	|	Disallow:					|
+	|							|
+	|	User-agent: StakerBot			|	
+	|	Disallow: /private/			|
+	|	Disallow: /private/contact.html	|
+	|							|
+	|	User-agent: *				|
+	|	Disallow: /				|
+	|							|
+	+-------------------------------------+
+
+common web scrapper patterns
+	-one record per page with multiple text selector.
+	-multiple text records per page.
+	-multiple items with multiple text selectors per page.
+	-Navigate pagination with Element Click Selector.
+
+how to use 
+	getting started:
+	press f12 > choose Web Scraper > choose Create new sitemap: input name and URL
+
+	add selector: it will select element to scraping
+	after finish making sitemap > click Add new selector > input id, type, selector:click on wanted element > save selector
+
+	add selector to previous element to extract data:
+	add selector > input id, type and select element (don't enabel multiple)> select blog-post as a parent >
+	
+	extract data:
+	choose sitemap scrapeMedium > choose selector scrape > choose scrape > start scraping > refresh > data should be show in table
+
+	export data: data may not be perfectly clean so clean it later after export
+	after all step finished > choose Export data > select export data type (.xlsx or .csv)
+
+AJAX websites (Asynchronous JavaScript And XML)
+	เป็นหลักการโหลดเว็บไซต์โดยส่วนใหนโหลดเสร็จจะแสดงก่อนไม่เหมือนสมัยก่อนที่โหลดทั้งหมดให้ครบแล้วแสดงรอบเดียว 
+	มักจะเรียกใช้งานผ่าน APIs(Application Programming Interface)
+
+HTTP (Hypertext Transfer Protocol)
+	-A request-response protocol
+	-Foundation of data communication for www
+
+Query Strings
+	-data can be part of url
+	-query string come after path and is indicate by ?
+
+
+project question homework:
+	1.เมนูใหนให้พลังงานและคุณค่าทางอาหารต่อราคาดีที่สุด(เมนูใหนคุ้มสุด)
+	2.เมนูใหนให้พลังงานและคุณค่าทางอาหารใกล้เคียงกับที่ต้องการในหนึ่งวันมากที่สุด
+	3.ควรสั่งอะไรบ้างเพื่อที่จะได้รับสารอาหารครบทั้ง5หมู่และพลังงานที่เพียงพอต่อหนึ่งวัน
+	4.
+	5.
+	6.
+	7.
+	8.
+	9.
+	10.
+
+-------------------22/11/65------------------------------------------------------------------------------
+scraper option
+	text 				: เอาแต่ข้อความที่อยู่ระหว่างtagของHTML
+	link 				: เข้าลิ้งเพื่อไปเอาข้อมูลอีกหน้า
+	popup link			:
+	image				: เอาแต่รูปที่อยู่ระหว่างtagของHTML
+	table				:  เอาข้อมูลออกมาจากtableเลือกหัวและข้อมูลที่ต้องการ
+	element attribute 	: เอาข้อมูลของelemenที่เลือกไว้(CSS)
+	HTML				: เอาโค้ดHTML
+	element			: เลือกelement 
+	element scrolldown	: เลือกelementที่ต้องเลื่อนลง(มักใช้กับเว็บแบบAJAX)
+	element click 		: เลือกelementที่ต้อ
+	grouped			:
+	sitemap .xml link	: เอาข้อมูลของไฟล์ .XML
+	pagination			:
+
+
+
+-------------------------------------------29/11/2565---------------------------------------------------
+Data visualiziton.
+
+	The advantages of data visualiztion :			 
+		-Our eyes are drawn to colour and patterns.
+		-We quickly see trends and outliers.
+		-Easily sharing informations.
+		-Interactively explore opportunities.
+		-Visualize patterns and relationship.
+	
+	The Disadvantage of data visualization :
+		-it's easy to make inaccurate assumtions.
+		-sometimes the visualization is just designed wrong so that it's biased or confusing.
+		-Biased or inaccurate informations.
+		-Correlation doesn't always mean causation.
+		-Core messages can get lost in translation.
+	
+	type of visualizations :
+		-Chart 	:Information presented in a tabular, graphical form with data diaplayed along two axes.
+				 Can be in the form of a graph, diagram, or map.
+
+		-Table 	:A set os figures displayed in rows and columns.
+
+		-Graph 	:A diagram of points, lines, segments, curves, or areas that represents certain variables 
+				 in comparison to each other, usually along two axes at a right angle.
+
+		-Geospatial:A visaulization taht shows data in map form using different shapes and colors to show 
+				 the relationship between pieces of data and specific locations.
+				 
+	General types of visualization :
+		-Infographic 	:A combination of visuals and word that represent data. Usually users charts or diagrams.
+
+		-Dashboard 	:A collection of visualizations and data displayed in one place to help with analyzing 
+					 and represent data. 
+
+		-Area Map 		:Typical used in project ???
+
+		-Bar chart 	:ใช้เปรียบเทียบเชิงจำนวนแบบแนวนอน เช่น เปรียบเทียบค่าเฉลี่ยอายุ
+		-column chart 	:ใช้เปรียบเทียบเชิงจำนวนแบบแนวตั้ง
+		-Group bar chart	:ใช้เปรียบเทียบแต่เป็นกลุ่ม
+		-Stack bar chart	:ใช้เปรียบเทียบแต่เป็นแต่ข้อมูลซ้อนกันเป็นชั้นๆ
+		-Line chart	:???
+		-pie chart		:???		
+		-Scatter plot	:???
+		-box plot 		:???
+		-venn diagram	:???
+		-sub plot		:???
+
+		-box-and-whisker plots:???
+		-Bullet Graph	:???
+		-gantt chart	:???
+		-Heat map		:???
+		-highlight table	:???	
+		-Histogram		:???
+		-Line histrogram	:???
+		-Tree map		:???
+
+	useful packages for visualiztions in python
+		-matplotlib (มักจะทำเป็น2D,มักใช้กับทางธุรกิจ)
+		-Seaborn (เขียนง่ายกว่า matplotlib, ใช้บนjupyterได้ ทำงานคล้ายๆmatplotlib,มักใช้กับทางธุรกิจ,มักจะทำเป็น2D)
+		-Bokeh (ทำแล้วนำเสนแบนเว็บได้)
+		-plotly (ทำ3Dได้ ทำทางวิทยาศาสตร์ได้)
+		-GGplot 
+
+	std คือ ความห่างระหว่างข้อมูล ยิ่งน้อยยิ่งใกล้
+	standardize คือ ค่าที่มีรูปแบบใกล้เคียงหรือเหมือนกัน
+	biased คือ ค่าที่ไม่สมดุลหรือมีค่าใดมากกว่าอีกค่าหนึ่ง
+	ICT คือ การรู้จักการใช้งาน ประโยชน์และโทษของเทคโนโลยี
+
+----------------------------06/12/2565---------------------------------------------------------------------------------------
+count 		นับrecord 
+countdistint	นับrecord ไม่สนค่าซ้ำ
+data scientist ทำหน้าที่เตรียมข้อมูลที่ดีที่สุดให้แก่คอมพิวเตอร์
+ข้อสอบ 
+	ข้อสุดท้าย data visualization
+	
+
+
+
+
+

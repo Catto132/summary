@@ -1,0 +1,142 @@
+      _                       _                  _     _ _            _   
+     | |                     | |                | |   (_) |          | |  
+  ___| | ___  _   _ _ __   __| |   __ _ _ __ ___| |__  _| |_ ___  ___| |_ 
+ / __| |/ _ \| | | | '_ \ / _` |  / _` | '__/ __| '_ \| | __/ _ \/ __| __|
+| (__| | (_) | |_| | | | | (_| | | (_| | | | (__| | | | | ||  __/ (__| |_ 
+ \___|_|\___/ \__,_|_| |_|\__,_|  \__,_|_|  \___|_| |_|_|\__\___|\___|\__|
+                                                                          
+Building Cloud Application
+การพัฒนาคลาวด์แอปพลิเคชัน
+เสาร์ 0830-1200
+---------------------------------------------------------------------------
+web application
+
+1.องค์ประกอบของเว็บ
+  	-server (เครื่องคอมพิวเตอร์) หรืออยู่บนคลาวน์ 
+  	-server OS เช่น window, linux
+  	-Database เช่น mySQL, SQL, servr, PostgreSQL
+  	-web server เช่น Apache, Nginx, IIS
+  	-web page เช่น HTML, CSS, JavaScript, PHP
+  	-web client - browser เช่น Chrome, Firefox
+
+	+------------------------+ <--request-- +------------+
+	|          server        |  		    | web client |
+	+--contain---+---run-on--+ --respones-> +------------+
+	| web server | server os |
+	+----have----+-----------+
+	|  web page  |
+      +------------+
+
+
+-tools
+   -Editor เช่น VScode, NetBeans, notepad
+   -language เช่น java, python, javaScript
+   -version control เช่น Git
+-type 
+   -simple ?
+   -responsive design ?
+   -Single page application ?
+---------------------------------------------------------------------------------
+2.GIT
+   -version control ?
+   -remote vs local
+     -Remote - Git server เช่น Github
+     -Local เช่น Git software (Protocol)
+
+ขั้นตอนการใช้ Git
+1)ติดตั้ง Git
+
+2)กำหนดเมลและชื่อผู้ใช้ให้ตรงกับgit
+   git config --global user.email "XXX@XXX.com"
+   git config --global user.name "XXXXX"
+3)สร้างโฟลเดอร์
+
+4)เพิ่ม.gitเข้าไปในโฟลเดอร์โปรเจค
+   git init
+-3ระดับของgitฝั่งlocal
+  4.1)Enviropment(ไฟล์ในโฟลเดอร์ของโปรเจค)
+	#เพิ่มไฟล์ในenviropmentไปในขั้นstaging ด้วยคำสั่ง
+	git add <file>
+	#กำหนดแอดเดรสที่โฟลเดอร์ที่ใช้เก็บข้อมูล
+	git remote add origin <https>
+
+  4.2)Staging(ไฟล์ในgitเตรียมพร้อมดันขั้นไปบนrespository)
+	#ยืนยันการเพิ่มไฟล์ด้วย
+	git commit -m "<comment>"
+	#เลือกก้านที่ต้องการเพิ่ม
+	git branch -M main
+	#แสดงว่าในstagingมีไฟล์อะไรบ้างที่เพิ่มหรือลดไปบ้าง
+	git status
+
+  4.3)Repository(โฟลเดอร์เก็บข้อมูลบนgit)
+	#ดันไฟล์เข้าไปในgit
+	git push -u origin main
+
+5) git log, git remote, git push, git clone
+
+  (\(\  head hurt.
+ ( @_@)
+ /   | 
+/    | 
+---------------------------------------------------------------------------------
+3. google Colaboratory
+IaaS
+PaaS
+SaaS - Software as a Service
+
+-Cloud ใช้ได้ทุกที่ที่มีอินเตอร์เน็ต
+-Python ไม่ต้องกังวลเรื่องเวอร์ชั่น
+-Hardware ทำงานได้อย่างมีประสิทธิภาพ ในราคาฟรี
+คำสั่งlinux terminal ใช้ ! 
+
+--------------------------------------05/11/65-----------------------------------
+NODE.JS
+
+REST APi
+- get (select)
+- post (INSERT)
+- put (UPDATE)
+- delete (DELETE)
+
+Data transfer from cliet to server 
+ resquest.body  	: request data  body
+ request.params	: request data by params
+ request.query	: request data by query
+
+example in C:\catto-code\example1
+
+Ip reference
+Local host = 127.0.0.1
+Client => Server => Database
+
++------------------------------------------------+
+|		Homework						|		
+|		Duration 2 WEEKs					|
++------------------------------------------------+
+|		-work 1-2 person					|
+|		-1st person act as database			|
+|		-2nd person act as client 			|
+|		-dont use same computer 			|
+|		-create with node.js				|
+|		-run with Postman				|
+|		-store with pgAdmin4				|
++------------------------------------------------+
+|		all this show teacher in person		|
+|		must explaine all code to teacher	|
++------------------------------------------------+
+
+----------------26/11/65-------------------------------------------------------
+
+CRUD 
+C (Create)
+R (Rename)
+U (Update)
+D (Delete)
+
+body 	= จะไม่แสดงบน URL
+params = จะแสดงบน URL
+query = จะแสดงบน URL
+
+
+
+

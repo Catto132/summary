@@ -1,0 +1,240 @@
+
+  ___          _           __   __  __         _    _            _                      _            
+ | _ ) __ _ __(_)__   ___ / _| |  \/  |__ _ __| |_ (_)_ _  ___  | |   ___ __ _ _ _ _ _ (_)_ _  __ _  
+ | _ \/ _` (_-< / _| / _ \  _| | |\/| / _` / _| ' \| | ' \/ -_) | |__/ -_) _` | '_| ' \| | ' \/ _` | 
+ |___/\__,_/__/_\__|_\___/_|   |_|  |_\__,_\__|_||_|_|_||_\___| |____\___\__,_|_| |_||_|_|_||_\__, | 
+  __ _ _ _  __| | |   \ ___ ___ _ __  | |   ___ __ _ _ _ _ _ (_)_ _  __ _                     |___/  
+ / _` | ' \/ _` | | |) / -_) -_) '_ \ | |__/ -_) _` | '_| ' \| | ' \/ _` |                           
+ \__,_|_||_\__,_| |___/\___\___| .__/ |____\___\__,_|_| |_||_|_|_||_\__, |                           
+                               |_|                                  |___/                            
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AI vs Machine Learning vs Deep Learning
+	
+	Artificial Intelligent : เทคนิคการใช้คอมพิวเตอร์เลียนแบบมนุษย์
+		└ Machien learning : เป็นส่วนหนึ่งของ AIใช้สถิติเพื่อให้เครื่องจักร/ระบบให้ประสบการห์ที่ดีขึ้น
+			└ Deep Learn : เป็นส่วนหนึ่งของ ML สามารถทำให้การคำนวณแบบ multi-layer neural network เป็นไปได้
+
+Machine Learning(ML)
+	Machine Learning คืออะไร
+		การสั่งให้คอมพิวเตอร์สร้างกฏหรือหาpatternด้วยการเรียนรู้จากชุดข้อมูลที่มีอยู่
+	
+	Machine Learning steps
+
+		01 Problem Definition
+			-ปัญหาคืออะไร
+			-ปกติแก้ใขอย่างไร และมีข้อจำกัดใดบ้าง
+			-จะแก้ปัญหาอย่างไร
+			-จำเป็นต้องใช้ ML ใหม
+			-มีข้อมูลมากพอหรือไม่
+		02 Data wrangling
+			01 data understading:ทำความเข้ใจข้อมูล
+			02 Structuring:จัดข้อมูลให้เหมือนกัน
+			03  Cleaing:ทำความสะอาดข้อมูล ลบค่าว่างค่าที่ต่างจากพวก
+			04 Enriching:เพิ่มประสิทธิภาพของข้อมูล โดยการเพิ่มข้อมูลจากภายนอกหรือภานใน
+			05 Validation:ตรวจสอบความแม่นยำและคุณภาพของข้อมูล
+			06 Publishing:เผยแพร่ข้อมูล
+		03 modeling
+			เป็นขั้นตอนสร้างML modelที่จะใช้ในการแก้ปัญหาควรเลือกmodelที่เหมาะสม
+			รูปแบบของ ML
+				Supervised
+				┃ รู้ว่าinputและค่าoutputได้ค่าอะไร
+				┣ Classification
+				└ Regression
+
+				Unsupervised
+				┃ รู้ค่าinputแต่ไม่รู้ค่าoutput
+				└ clustering
+				
+			Supervised learning 
+				การสั่งให้คอมพิวเตอร์สร้างกฏหรือหา pattern ด้วยการเรียนรู้จากชุดข้อมูลที่มีอยู่
+				*โดยภายในชุดดังกล่าวจะมีคำตอบเฉลยอย่างชัดเจน*	
+			Unsupervised learning
+				การสั่งให้คอมพิวเตอร์สร้างกฏหรือหา pattern ด้วยการเรียนรู้จากชุดข้อมูลที่มีอยู่
+				*โดยภายในชุดข้อมูลดังกล่าวไม่มีคำตอบเฉลยที่ชัดเจน*
+			
+				Classification
+					เรียนรู้ชุดข้อมูลที่มีเพื่อทำนายกลุ่ม ชนิด หรือแบ่งข้อมูล เช่น
+						ระบุชื่อสัตว์จากรูปภาพ		(หมู, หมา, กา, ไก่, ...)
+						จำแนกอารมณ์จากข้อความ		(สุข, เศร้า, เหงา ,โกรธ, ...)
+						ตรวจจับการใส่หน้ากากของคนในรูป	(ใส่หน้ากาก,ไม่ใส่หน้ากาก)
+				Classification Types
+					Binary:
+						ทำนายผลเป็น Yes/No (มี output ได้เพียง 2 รูปแบบ)
+						ตัวอย่าง ทำนายว่าเป็นโรคหรือไม่
+					Multiclass:
+						ทำนายผลเป็น calss เพียงชนิดเดียว(มี output ได้หลายรูปแบบ)
+						ตัวอย่าง บอกชนิดสัตว์ในรูปโดยในรูปมีสัตว์ชนิดเดียว(หมู, หมา, กา, ไก่, ...)
+					Multilabel:
+						ทำนายผลเป็น calss มากกว่าหนึ่งชนิด(มี output ได้หลายรูปแบบ)
+						ตัวอย่าง บอกชนิดสัตว์ในรูปโดยในรูปมีสัตว์มากกว่า 1 ชนิด(หมู, หมา, กา, ไก่, ...)
+				Regression
+					เรียนรู้ชุดข้อมูลที่มีค่าเป็นตัวเลขเพื่อทำนายค่าที่เป็นตัวเลขหรือปริมาณที่สนใจ เช่น
+						-ทำนายราคาบ้านที่เกี่ยวข้อง
+						-ทำนายยอดสินค้าในเดือนหน้า
+
+				Clustering
+					เรียนรู้ชุดข้อมูลที่มีเพื่อจับกลุ่มของข้อมูลที่มีควาใคล้ายคลึงกัน
+						-การแบ่งกลุ่มเอกสารที่ไม่ระบุประเภท
+						-การจัดกลุ่มสิ่งมีชีวิตจากข้อมูล DNA และโปรตีน
+
+
+			ตัวอย่าง ML Algorithms
+				-Linear Regression					Regression
+				-Multiple Linear Regression				Regression
+				-Logistic Regression					Classification
+				-Logistic Function(Sigmoid Function)		Classification
+				-Support Vector Machine(SVM)			Classification,Regression
+					-Maximize Margin
+					-Hard Margin vs Soft Margin
+					-Kernal Trick
+				-Support Vector Regression				Classification,Regression
+				-Decision Tree						Classification,Regression
+				-Random Forest						Classification,Regression
+				#other tree-base model CatBoost,XGBoost,AdaBoost,Extra Tree Regressor/Classifier
+				-Neural Network 						Classification,Regression
+				#Deep Learning = Deep Neural Networks
+				-K-means							Clustering
+				-Hierarchical Clustering 				Clustering
+				
+			วิธีการฝึกModel
+				Train-Validation-Test Split
+					เพื่อวัดผลการเรียนรู้ของ model โดยปกติเราจะแบ่งข้อมูลออกเป็น 3 ส่วน
+					1.Train set:ส่วนที่นำไปให้เรียนรู้
+					2.Validation set:ส่วนที่ทดสอบประสิทธิภาพของ model ที่ทำการเรียนรู้จากชุดข้อมูล Train เรียบร้อยแล้ว
+								 validate set จึงใช้ในการตรวจสอบและปรับปรุงmodelให้ดียิ่งขึ้น
+					3.Test set:ส่วนที่ใช้ทดสอบประสิทธิภาพของ model ที่ปรับปรุงแล้ว
+				#ในกรณีที่มีข้อมูลน้อย อาจไม่ต้องแยกออกมา แต่ให้แบ่งข้อมูลโดยใช้เทคนิคอื่นๆ เช่น K-fold, Leave-one-out
+				
+				Hyperparameter Tuning 
+					การทดลองปรัยเปลี่ยน(tuning)ค่าhyperparameterที่ใช้กำหนดลักษณะของ machien learning model เช่น
+						-ประเภท kernalของ SVM
+						-จำนวน treeของ random forest
+						-จำนวน clusterของ K-means
+						-จำนวน layer/neuronของ neural networks			
+					Hyperparameter Tuning Algorithm Example 
+						-Grid search 
+						-Random searh
+						-byesian optimization 
+						-Gradient-based optimization 
+						-Evolutionary optimization
+		04 Evaluation
+		#ต่อจากนี้เพื่อความเข้าใจแนะนำให้หาในgoogleเพิ่มตามชื่อหรืออ่านในลิ้งด้านล่าง
+		#https://www.canva.com/design/DAFPUIuhemE/TXQ2Fhun-xxc19KuusFeHQ/view?utm_content=DAFPUIuhemE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#70
+			confusion matrix
+			+---------------+----------------+
+			| True negative | False positive |
+			+---------------+----------------+	
+			| False negative| True positive  |
+			+---------------+----------------+
+			Accuracy 	
+				TP+TN = จำนวนครั้งที่ทายถูก
+				TP+TN+FP+FN = จำนวนครั้งที่ทายทั้งหทด
+				จำนวนครั้งที่ทายถูก/จำนวนครั้งที่ทายทั้งหทด = ความแมเนยำ
+			Precision & Recall
+				Precision : "ความแม่นยำ" ความถูกต้องในการตอบpositiveแต่ละครั้ง
+				Recall : "เก็บให้ครบ" จากข้อมูลจริงที่เป็นPositiveสามารถทำนายถูกได้ดีแค่ใหน
+			F-measure (F1 Score)
+			#มีสูตรหาในเน็ตเอา
+			β > 1:ให้ความสำคัญ recall > precision
+			β = 1:ให้ความสำคัญ recall = precision
+			β < 1:ให้ความสำคัญ recall < precision
+			F1 = 2/(recall^-1)+(precision^-1) 
+			   = 2*((precision*recall)+(precision+recall))
+			#β คือ beta
+			#ถ้าอยากได้ดูง่ายกว่านี้ลองgoogle F-measure
+			F1 Score
+				-Macro F1
+				-Micro F1
+				-Weighted F1
+			Regression metrics
+				-Mean Absolute Error(MAE)
+				-Mean Absolute Percentage Error(MAPE)
+				-Mean Squre Error(MSE)
+				-Root Mean Squre Error(RMSE)
+			Regression metrics concept 
+				metrics ส่วนใหญ่ regression จะมีลักษณะ
+					1.หาผลต่างขอวข้อมูลที่ทำนายกับของจริง
+					2.ทำให้ผลต่างมีค่าบวก(ใช้กำลัง 2/หาคู่สัมบูรณ์)
+					3.หาค่าเฉลี่ย
+					4.(optional)คิดเป็น % ของข้อมูลจริง
+				Clustering concept
+					1.Rand Index(RI) : ดูcluster ที่ได้เปรียบเทียบกับlabelจริง
+					2.Adjusted Rand Index(ARI) : ปรับค่า Rand Index ให้อยู่ในช่วงที่อธิบายได้
+					3.Silhouette Score : ข้อมูลใน cluster เดียวกันควรอยู่ใกล้กันข้อมูลคนละ cluster กันควรอยู่ใกลกัน
+					4.Homogeneity, Completeness และ V-measure คล้ายกับ Precision, recall และ F1 score
+				Error Analysis 
+					เป็นการวิเคราะห์ความผิดพลาดที่ modelทำนายออกมา โดยมีสิ่งที่ต้องการพิจารณาหลักๆดังนี้
+						1.สิ่งที่ model ทำนายผิดนั้นมีผิดรูปแบบใดบ้าง
+						2.จำนวนครั้งที่ทำนายผิดในแต่ละชนิดนั้นเยอะแค่ไหน
+						3.ความผิดพลาดนั้นส่งผลกระทบต่อการใช้งานมากแค่ใหน
+						4.ความยากง่ายของวิธีการแก้ข้อผิดพลาดจากข้อ 2 3 4 จะช่วยบอกได้ว่าเราควรแก้ใขที่ปัญหาไหนก่อน
+				Underfit/overfit
+				#เปิดgoogleเลยอันนี้ไม่ดูงงแน่
+					Underfit
+						model ได้ผลลัพธ์ที่แย่ทั้งใน train setและ validation set
+					วิธีแก้:
+						01เพิ่มความซับซ้อนของ model
+						02พิ่มเวลาการ Train
+						03เช็ค Bugใน code
+					Overfit
+						model ได้ผลลัพธ์ที่ดีมากใน train setแต่แย่มากใน validation set
+					วิธีแก้:
+						01ลดความซับซ้อนของ model
+						02เมื่อเริ่มเห็นว่า model เริ่มทำได้ไม่ดีขึ้นใน validation set แล้วให้หยุดการ train
+						03หาข้อมูลมา trainเพิ่ม
+
+Intro to Deep Learning(DL)
+	Deep learning = Deep Neural Learning
+	Loss FUnction 
+		เป็นfunction ที่นิยามประสิทธิภาพของ model 
+		ถ้ามีค่าสูงหมายความว่า model ทำงานได้แย่
+		ถ้ามีค่าต่ำหมายความว่า model ทำงานได้ดี
+		*ดังนั้น เป้าหมายของการฝึก คือ การลดloss ของmodel ให้น้อยลง*
+	Binary Cross Entropy Loss
+		P = ค่าคงที่ output layer
+			-ถ้าใกล้ 0 หมายความว่าเป็น Not Human
+			-ถ้าใกล้ 1 หมายความว่าเป็น Human
+		y = label จริงของข้อมูล
+			-ถ้าใกล้ 0 หมายความว่าเป็น Not Human
+			-ถ้าใกล้ 1 หมายความว่าเป็น Human
+	Gradient Descent
+		เป็นวิธีที่ใช้ลด loss ที่ใช้กันในหลาย model ทั้ง logic regression และ deep learningซึ่งใช้ "Calculus" เพื่อหาอัตราค่าเปลี่ยนแปลงของ loss 
+		เมื่อเปรียบเทียบกับ parameter ของ model ทำให้บอกได้ว่าเปลี่ยน parameter ไปทางได้แล้วลด loss ได้
+	
+	Deep Learning Architect 
+		Convolution Neural Network(CNN)
+			เป็น deep learning ตัวหนึ่ง ที่ใช้การ convolution ในการทำ forward propagation ซึ่งใช้กันแพร่หลายกับงานที่เป็นรูปภาพ
+		Recurrent Neural Network(RNN)
+			เป็น deep learning ตัวหนึ่ง การส่งข้อมูลกันจากเวลาในแนวของเวลาส่งนใหญ่กับงานที่เป็น sequence เช่น time seriesหรือ natural language process(NLP)
+
+
+Useful python package
+	Sklearn
+	Scipy
+	Statsmodels
+	Prophet
+	Keras & Tensorflow 
+	Pytorch
+	OpenCV
+	Transformer(hugging face)
+
+Relate topics
+	Feature Importance
+	Dimensionality Reduction
+	Topic Modeling
+	Survival Analysis 
+	Anomaly Detection
+	Association Analysis
+	Time Series Analysis
+	Reinforcement Learning
+	semi-supervised
+	New Researches
+
+
+
+
+
+
+

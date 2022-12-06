@@ -1,0 +1,242 @@
+   ___           _            ___  ___       __  __               
+  / _ )___ ____ (_)___  ___  / _/ / _ \__ __/ /_/ /  ___  ___     
+ / _  / _ `(_-</ / __/ / _ \/ _/ / ___/ // / __/ _ \/ _ \/ _ \    
+/____/\_,_/___/_/\__/  \___/_/  /_/   \_, /\__/_//_/\___/_//_/    
+  / _ \_______  ___ ________ ___ _  _/___/(_)__  ___ _            
+ / ___/ __/ _ \/ _ `/ __/ _ `/  ' \/  ' \/ / _ \/ _ `/            
+/_/  /_/  \___/\_, /_/  \_,_/_/_/_/_/_/_/_/_//_/\_, /             
+              /___/                            /___/              
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In this tutorial, we will cover:
+
+Basic Python: Basic data types (Containers, Lists, Dictionaries, Sets, Tuples), Functions, Classes
+Numpy: Arrays, Array indexing, Datatypes, Array math, Broadcasting
+Matplotlib: Plotting, Subplots, Images
+Bonus: read/write text files, pandas, opencv
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01 Numbers
+	print(x + 1)   # Addition			(บวก)
+	print(x - 1)   # Subtraction		(ลบ)
+	print(x * 2)   # Multiplication		(คูณ)
+	print(x / 2)   # Division			(หาร)
+	print(x ** 2)  # Exponentiation		(ยกกำลัง)
+	print(x // 2)  # Floor division		(หารแบบปัดเศษลง)
+	print(x % 2)   # Modulus			(ค่าโมดูลัส)
+	output:
+		4
+		2
+		6
+		1.5
+		9
+		1
+		1
+	#มอดุลัสของยัง (Young's modulus) หรือ มอดุลัสของสภาพยืดหยุ่น (modulus of elasticity หรือ elastic modulus) เป็นค่าบอกระดับความแข็งเกร็ง (en:stiffness) ของวัสดุ 
+	#ค่ามอดุลัสของยังหาจาก ค่าลิมิตของอัตราการเปลี่ยนแปลงของ ความเค้น (stress) ต่อ ความเครียด (strain) ที่ค่าความเค้นน้อย สามารถหาจากความชัน ของกราฟความสัมพันธ์
+	#ที่มาของข้อมูล (https://th.wikipedia.org/wiki/%E0%B8%A1%E0%B8%AD%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%B1%E0%B8%AA%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%A2%E0%B8%B1%E0%B8%87)
+	
+	x += 1 		#คือ x = x+1
+	print(x)
+	x *= 2 		#คือ x = x*2
+	print(x)
+	output:
+		4
+		8
+
+	y = 2.5
+	print(type(y))
+	print(y, y + 1, y * 2, y ** 2)
+	output: 
+		<class 'float'>
+		2.5 3.5 5.0 6.25
+
+	a = 3
+	print(type(a))
+	print(a/3)
+	print(type(a/3))
+	output:
+		<class 'int'>
+		1.0
+		<class 'float'>
+
+	int(2.9), round(2.9)
+	output:
+		(2, 3)
+	
+	*สำคัญ*
+	python ต่างจากภาษาส่วนใหญ่ เนื่องจาก python ไม่มีincrement(x++)หรือ decrement(x--)
+	
+.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
+02 Booleans
+
+	t, f = True, False
+	print(type(t))
+	output:
+		<class 'bool'>
+	
+	print(t and f)	# Logical AND;
+	print(t or f)	# Logical OR;
+	print(not t)	# Logical NOT;
+	print(t != f) 	# Logical XOR;
+	output:
+		False
+		True
+		False
+		True
+
+.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
+03 Strings
+
+	hello = 'hello'  # สตริงสามารถใช้ single quotes
+	world = "world"  # หรือ double quotes ก็ได้ ไม่มีปัญหา
+	print(hello, len(hello))
+	output:
+		hello 5
+	#คำสั่งlen()จะนับตัวอักษรในค่าสตริง
+	
+	hw = hello + ' ' + world  # การเชื่อมค่าสตริง
+	print(hw)
+	output:
+		hello world
+
+	a = '2'
+	b = '3'
+	print(a+b,type(a+b))
+	output:
+		23 <class 'str'>
+
+	hw12 = '{} {} {}'.format(hello, world, 12)  # string formatting
+	print(hw12)
+	output:
+		hello world 12
+	
+	s = "hello"
+	print(s.capitalize())  		# พิมพ์ใหญ่ตัวแรก
+	print(s.upper())       		# เปลี่ยนค่าสตริงเป็นพิมพ์ใหญ่ทั้งหมด
+	print(s.rjust(7))      		# ขยับไปทางขวา,เว้นช่องว่างด้วยspaces
+	print(s.center(7))     		# ขยับไปตรงกลาง,เว้นช่องว่างด้วยspaces
+	print(s.replace('l', '(ell)'))  	# เปลี่ยนค่าหนึ่งด้วยอีกค่าหนึ่ง
+	print('  world '.strip())  		# ลบช่องว่างด้านหน้าและด้านหลัง
+	output:
+		Hello
+		HELLO
+		  hello
+		 hello
+		he(ell)(ell)o
+		world
+
+.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
+04 if/else
+
+	score = 40
+	if score >= 80:
+	   grade = 'A'
+	elif 70 <= score < 80 :
+	   grade = 'B'
+	elif 60 <= score < 70 :
+	   grade = 'C'
+	elif 50 <= score < 60 :
+	   grade = 'D'
+	else :
+	   grade = 'F'
+	print(grade)
+	output:
+		F
+
+.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
+05 Loop
+	
+#การสร้างloopเพื่อแสดงข้อมูลทั้งหมดในanimal
+	animals = ['cat', 'dog', 'monkey']
+	for animal in animals:
+    	   print(animal)
+	output:
+		cat
+		dog
+		monkey
+
+#ถ้าต้องการตัวเลยด้วยกำกับด้วยใช้ฟังก์ชันenumerate()
+	animals = ['cat', 'dog', 'monkey']
+	for idx, animal in enumerate(animals):
+    	   print('#{}: {}'.format(idx, animal))
+	output:
+		#0: cat
+		#1: dog
+		#2: monkey
+	type(animals),type(animal)
+	output:
+		(list, str)
+
+
+	# [] คือ list
+	# () คือ tuple
+	l = ['a','b',1,'1.0']
+	for i in l:
+  	   print(i,type(i))
+	output:
+		a <class 'str'>
+		b <class 'str'>
+		1 <class 'int'>
+		1.0 <class 'str'>
+
+	i = 0
+	while i < 5:
+  	   print(i)
+  	   i += 1
+	output:
+		0
+		1
+		2
+		3
+		4
+
+.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo..oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
+06 Container
+
+	list
+		#listในpythonทำหน้าที่เหมือนarrayเลย แต่สามารถปรับขนาดได้และสามารถเก็บข้อมูลได้หลายรูปแบบ
+		xs = [3, 1, 2]   	# สร้าง list
+		print(xs, xs[2])
+		print(xs[-1])     	# Negative indices count from the end of the list; prints "2"
+		output:
+			[3, 1, 2] 2
+			2
+
+		xs[-3]
+		output:
+			3
+
+		xs[1],xs[-2]
+		output:
+			(1, 1)
+		
+		xs[2] = 'foo'    # Lists สามารถเก็บข้อมูลรูปแบบอื่นได้
+		print(xs)
+		output:
+			[3, 1, 'foo']
+
+		xs.append('bar') # เพิ่มข้อมูลต่อท้าย list
+		print(xs)  
+		output:
+			[3, 1, 'foo', 'bar']
+
+		x = xs.pop()     # ลบและแสดงค่าสุดท้ายของlist
+		print(x, xs)
+		output:
+			bar [3, 1, 'foo']
+
+	slicing
+
+
+
+
+
+
+
+
+
+
+
+
+
+

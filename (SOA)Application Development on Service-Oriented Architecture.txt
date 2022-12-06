@@ -1,0 +1,39 @@
+   _____  ____                             _ |\_
+  / ____|/ __ \   /\                       \` ..\
+ | (___ | |  | | /  \                 __,.-" =__Y=
+  \___ \| |  | |/ /\ \              ."        )
+  ____) | |__| / ____ \       _    /   ,    \/\_
+ |_____/ \____/_/    \_\     ((____|    )_-\ \_-`
+				   `-----'`-----` `--`
+                                               
+Application Development on Service-Oriented Architecture
+การพัฒนาแอปพลิเคชั่นบนสถาปัตยกรรมเชิงบริการ
+เสาร์ 1300-1700
+----------------------------------------------------------------------------------------
+Ngrok:
+
+05/11/65--------------------------------------------------------------------------------
+Linux: 
+	sudo -i 					= log as admin.
+	apt-get <name>
+	apt-get install <name>
+
+Docker:
+	docker ps -all 				= show all docker container.
+	docker system prune 			= delete all stopped container, networks, dangling image, dangling build cache..
+	docker pull <name>				= Pull lasted docker container.
+	docker pull <name:version>			= Pull specific docker version.
+	docker network create <networkname>	= สร้าง Network เพื่อให้ Container สามารถคุยกันได้.
+	docker network ls				= show all network inside docker host.
+	docker run --name mysql			= กำหนดให้เรียกชื่อ container ว่า mysql
+	-e MYSQL_ROOT_PASSWORD=1111		= กำหนดตัวแปร environment MYSQL_ROOT_PASSWORD = 1111
+	-d mysql:5.7					= กำหนดให้ Run แบบ Detach และทำการเรียกใช้ Image จาก MySQl Version 5.7
+	docker run --name pma 			= กำหนดให้เรียกชื่อ container นี้ว่า pma
+	–p 8888:80 					= กำหนดให้ Mapping Port เข้ามาที่Container นี้ด้วยPort 8888 ต่อ Port 80
+	-e PMA_ARBITRARY=1 				= กำหนดตัวแปร environment PMA_ARBITRARY =1
+	---too fast can't keep up.---
+	docker exec -it pma sh			= นำ shell เข้าสู่ container จากนั้น pwd เพื่อตรวจสอบ path
+	exit 						= ออก container ใน container เครื่องหมาย # นำ
+	docker volume create <volume>		= สร้าง volumn
+	docker volume ls				= list volumn
+	docker volume rm <volume>			= ลบ volumn

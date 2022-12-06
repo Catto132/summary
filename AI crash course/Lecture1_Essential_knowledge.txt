@@ -1,0 +1,176 @@
+
+    ______                     __  _       __                                
+   / ____/____________  ____  / /_(_)___ _/ /                                
+  / __/ / ___/ ___/ _ \/ __ \/ __/ / __ `/ /                                 
+ / /___(__  |__  )  __/ / / / /_/ / /_/ / /                                  
+/_____/____/____/\___/_/ /_/\__/_/\__,_/_/_              ______              
+   / //_/____  ____ _      __/ /__  ____/ /___ ____     / ____/___  _____    
+  / ,<  / __ \/ __ \ | /| / / / _ \/ __  / __ `/ _ \   / /_  / __ \/ ___/    
+ / /| |/ / / / /_/ / |/ |/ / /  __/ /_/ / /_/ /  __/  / __/ / /_/ / /        
+/_/ |_/_/ /_/\____/|__/|__/_/\___/\__,_/\__, /\___/  /_/    \____/_/         
+    ___    ____   ____                 /____/                             __ 
+   /   |  /  _/  / __ \___ _   _____  / /___  ____  ____ ___  ___  ____  / /_
+  / /| |  / /   / / / / _ \ | / / _ \/ / __ \/ __ \/ __ `__ \/ _ \/ __ \/ __/
+ / ___ |_/ /   / /_/ /  __/ |/ /  __/ / /_/ / /_/ / / / / / /  __/ / / / /_  
+/_/  |_/___/  /_____/\___/|___/\___/_/\____/ .___/_/ /_/ /_/\___/_/ /_/\__/  
+                                          /_/                                
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Table of contents:
+	1. Programming Tools for AI 
+	2. Data Sources
+	3. AI Devcelopment Process
+	4. Tips & Useful Sites
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+01 Google colab
+
+	ข้อได้เปรียบ
+		ไม่ต้องตั้งค่าให้ยุ่งยาก
+		เข้าใช้งานได้ฟรี
+		แบ่งปันได้ง่าย
+	ข้อเสียเปรียบ
+		ต้องใช้อินเตอร์เน็ต
+		มีหน่วยความจำและเวลาการทำงานที่จำกัด(สำหรับแบบฟรี)
+
+	ติดตั้ง Library
+		!pip install <library name>
+		!apt-get install <library name>
+
+	คำสั่งที่เป็นcommand line สามารถใช้ได้โดย !หรือ % เช่น	
+		%cv, %cp, %cat, %mkdir, %pwd, %ls, %rmdir, %dir, %rm, %md
+
+	การเข้าถึงไฟล์ใน Google Drive
+		+-code:--------------------------+
+		|from google.colab import drive	|
+		|drive.mount('/content/drive')	|
+		|						|
+		+-output:------------------------+
+		|Mounted at /content/drive		|
+		|						|
+		+--------------------------------+
+		
+	การเพิ่มแบบฟอร์มใน google colab
+		ไปสามจุดทางขวาสุด > คลิกแล้วเลือก Add a form  > คลิกที่สามจุดอีกที  > เลือก add a form แล้วเลือก add a form field > เลือกลักษณะข้อมูลแล้วกด save
+
+	
+Get started colab : https://colab.research.google.com/drive/1E1IaYVAhReEbBZoAlGiVIr69yUnx3XqD?usp=sharing
+
+~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
+02 Open-Source Dataset
+	
+	Data format 
+		Computer Vision				image
+		Natural Language Processing		text
+		Signal Processing			signal 
+		Data Science				big data
+		IOT / Robotics				big data
+
+	Kaggle
+		kaggle คืออะไร
+			-kaggle คือแพลทฟอร์มชุมชนออนไลน์สำหรับนักวิทยาการข้อมูลและผู้ที่ชอบ Machine Learning
+			-ให้ผู้ใช้สามารถร่วมมือกับผู้ใช้งานคนอื่น
+			-ค้นหาและเผยแพร่ datasets
+			-การแข่งขันการแก้ปัญหาข้อมูล ระหว่างนักวิทยาการข้อมูล
+		
+		การโหลดข้อมูลจาก kaggle ใน google colab
+			! pip install -q kaggle
+			from google.colab import files
+			files.upload()
+			! mkdir ~/.kaggle
+			! cp kaggle.json ~/.kaggle/
+			! chmod 600 ~/.kaggle/kaggle.json
+			! kaggle competitions download -c 'name-of-competition'
+
+	Hugging Face
+		#Natural Language Process(NLP):การทำให้คอมพิวเตอร์เข้าใจภาษาของมนุษย์ เพื่อให้เกิดการสื่อสารข้อมูล รวมทั้งการวิเคราะห์ข้อมูลต่าง ๆ ออกมาได้อย่างที่มนุษย์สื่อสารกัน
+		#ที่มาของความหมาย (https://stepstraining.co/foundation/natural-language-processing)
+		Hugging Face คืออะไร
+			-hugging face คือ NLP-focused startupพร้อมกับ ชุมชนopen-sourceขนาดใหญ่ โดยเฉพาะรอบๆ transformer library.
+			-transformer คือ library ที่มีพื้นฐานจากภาษาpythonโดยเป็นแบบAPIให้ใช้ มีสถาปัตยกรรมที่ถูกสร้างจากtransformerอย่างเช่น BERT,RoBERTa,GPT-2 หรือDistillBERT
+			 ที่ล้ำสมัยในหลายๆด้านของNLPเช่นtextclassification, information extraction, questionanswering, and text generation.
+
+		การโหลดข้อมูลจาก Hugging Face ใน google colab
+			!pip -q install transformers
+			!pip -q install datasets
+			from datasets import load_dataset
+			dataset = load_dataset('thaiqa_squad', split='train')
+
+
+~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
+03 AI Development Process
+
+	Design workflow
+		01 ค้นหาปัญหา(Identify Problem):
+			-แก้ปัญหาเพื่ออะไร
+			-ข้อมูลที่ต้องการเป็นอย่างไร
+		02 เตรียมข้อมูล(Prepare the data)
+			-structure data อย่างเช่น ข้อมูลแบบcsv,sql
+			-Unstructure data อย่างเช่น ข้อความ, รูปภาพ, วิดิโอ
+		03 หาโมเดลAI และalgorithm(choose AI & Algorithm)
+			Machine Learning:
+				-Supervised learning
+				-Unsupervised learning
+				-Reinforcement learning
+		04 เลือกplatform(Selected platform)
+			
+	AI Development Cycle
+		01 Get data
+			หาข้อมูลที่ตรงกับปัญหา
+		02 Clean, Prepare & manipulate data
+			ทำความสะอาดข้อมูลและจัดเรียงข้อมูล
+				
+				-Data Cleaning			Missing Data / Noisy data			Remove, Fill NA, KNN
+				
+				-Dimensionality Reduction	reducing the number of input		PCA, t-SNE
+									features in training data.
+				
+				-Feature Engineering		create better features for your		Categorical to numerical (0,1)
+									dataset
+				
+				-Sampling Data			Sub data for ease of computational	Stratification
+				
+				-Data Transformation		Converting the Data to the			Normalization, Standardization
+									Same Structure
+				
+				-Imbalanced Data			Classes are imbalance, creating		
+									a strong bias for the model			Over/Under Sampling		
+		03 Train model
+			ข้อมูลสำหรับฝึก
+				-Training data
+				-Validation data
+				-Testing data
+		04 Test data
+			Evaluation the model
+				-โมเดลนี้ดีแค่ใหน
+				-Loss:วัดโมเดลทำงานดี/แย่ขนาดใหน
+				-Accuracy:วัดว่าผลลัพโมเดลแม่นขนาดใหน
+		05 improve
+			-เพิ่มจำนวนข้อมูล
+			-ลองalgorithmหลายๆแบบ
+			-ปรับแต่งhyperparameter
+
+~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
+04 Tips & Useful sites
+	
+	tip 1: Research paper
+		-ResearchGate
+		-IEEE Advancing Technology for Humanity
+		-Papers With Code
+	tip 2: Useful Articles 
+		-Medium
+		-towards data science
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
