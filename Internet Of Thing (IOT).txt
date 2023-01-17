@@ -1,0 +1,100 @@
+
+  _____       _                       _      ____   __   _______ _     _             
+ |_   _|     | |                     | |    / __ \ / _| |__   __| |   (_)            
+   | |  _ __ | |_ ___ _ __ _ __   ___| |_  | |  | | |_     | |  | |__  _ _ __   __ _ 
+   | | | '_ \| __/ _ \ '__| '_ \ / _ \ __| | |  | |  _|    | |  | '_ \| | '_ \ / _` |
+  _| |_| | | | ||  __/ |  | | | |  __/ |_  | |__| | |      | |  | | | | | | | | (_| |
+ |_____|_| |_|\__\___|_|  |_| |_|\___|\__|  \____/|_|      |_|  |_| |_|_|_| |_|\__, |
+                                                                                __/ |
+                                                                               |___/ 
+08:30-12:30 อังคารเช้า
+อาจารย์จรรยา แหยมเจริญ
+~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
+17/01/66------------------------------------------------------------------------------------------------------------------
+IOT คืออะไร
+	the Internet of Things (IoT) technology and wireless technology,
+	tools, and techniques for developing software applications for IoT that
+	control devices via a microcontroller, mobile, and wireless device.
+	Programming techniques that are effective for systems with limited
+	processors and memory. Using data on a database that supports a
+	time synchronization system for mobile communications and a variety
+	of wireless environments. Development of wireless application
+	connects to the database server with web services.
+
+IOT Evaluation
+
+-
+|	pre internet 
+|	"Human to Human"
+|	-fixed and mobile telephony
+|	-sms
+|	*first gen most thing are analog like one way phone communication and pager.
+v
+-(networks)
+|
+|	Internet Of content
+|	"WWW"
+|	-E-mail
+|	-information
+|	-entertain
+|	*website start to appear there are two-way communication now 
+|	 and blog post are still popular.
+v
+-(IT platforms and services)
+|
+|	Internet of Service
+|	"Web 2.0"
+|	-e-productive
+|	-e-commerce
+|	*internet start is essential for business and 
+|	 now people start to do businees with it.
+v
+-(phone and applcations)
+|
+|	Internet of people 
+|	"social media"
+|	-Skype
+|	-Facebook
+|	-Youtube
+|	*social media start to appear most people have access to internet 
+|	 and now people start to make group and doing business within that group.
+v
+-(devices objects, data)
+|
+|	Internet Of Thing
+|	"Machine to Machine"
+|	-identification, tracking, monitering, metering.
+|	-automation, actuation, payment.
+|	*machine is communicate with each other learning what human used to do and 
+|	 do for that for them.
+v
+-(Data and ambient context)
+
+Major component of IOT
+	Sensors/ actuators
+	communication between servers or server platform 
+	server/ Middleware PLatform
+	Data ANalytics Engines
+	Apps(IOS,Andriod,Web)
+
+communication technology for IOT
+	Bluetooth
+	Zigbee
+	Zd-Wave
+	Near Field Communication
+	RFID
+	WiFi
+	2G/3G/LTE
+	Wibro/Mobile WiMax
+	Power Line Communication (PLC)
+	Ethernet
+	Internet
+
+terminologies similar to IoT
+	Ubiquitos Sensor Networks(USN)
+	MAchine-to-Machine(M2M)
+	internet of everything(IoE)
+	Cloud of Things
+	Web of Things
+
+
