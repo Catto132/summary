@@ -1,0 +1,116 @@
+  _____        __                           _   _               _____      _        _                 _ 
+ |_   _|      / _|                         | | (_)             |  __ \    | |      (_)               | |
+   | |  _ __ | |_ ___  _ __ _ __ ___   __ _| |_ _  ___  _ __   | |__) |___| |_ _ __ _  _____   ____ _| |
+   | | | '_ \|  _/ _ \| '__| '_ ` _ \ / _` | __| |/ _ \| '_ \  |  _  // _ \ __| '__| |/ _ \ \ / / _` | |
+  _| |_| | | | || (_) | |  | | | | | | (_| | |_| | (_) | | | | | | \ \  __/ |_| |  | |  __/\ V / (_| | |
+ |_____|_| |_|_| \___/|_|  |_| |_| |_|\__,_|\__|_|\___/|_| |_| |_|  \_\___|\__|_|  |_|\___| \_/ \__,_|_|
+                                                                                                        
+                                                                                                        
+128-437 การสืบค้นสารสนเทศ
+0830-1230 พุธบ่าย
+<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>
+25/01/66--------------------------------------------------------------------------------------
+slide(https://classroom.google.com/u/1/c/NTgzNDY1NTYwMzEx)
+Introduction To Information Retrieval.
+ข้อมูล(Data) - ข้อมูลเท็จจริงต่างๆ ที่มีอยู่ในธรรมชาติเป็นกลุ่มสัญลักษ์แทนปริมาณ หรือการกระทำต่างๆ ที่ยังไม่ผ่านการประมวลผล
+สารสนเทศ(Information) - ข้อมูลที่ได้ผ่านกระบวณการประมวลผลหรือจัดระบบแล้ว เพื่อให้มีความหมายและคุณค่าสำหรับผู้ใช้
+ความรู้(Knowledge) - สารสนเทศบวกกับknow-how คือสารสนเทศอย่างเดียวไม่พอที่จะทำให้เกิดความรู้เราต้อวเข้าใจ วิธีที่ดีที่สุดในการใช้สารสนเทศในการดำเนินการต่างๆ
+
+										Know-How
+										    |
+										    v
+Data  -> 	Data Processing	->	Information	->	knowledge
+
+Inforamtion Retrieval 
+ -Goal: retrieve information shich might be useful or relavant to the user's information need.
+ -Much of IR depends upon idea that
+	-similar vocabulary -> relavant to the same queries
+ -usually look for documents matching matching query words
+ -"similar" can be measure in many query word
+	-String matching/comparison
+	-Same vocabulary used
+	-Probability tha tdocuments arise from idea from same model
+	-same meaning
+
+Information vs Data Retrieval
+ Data Retrieval: Determine a set of documents contain query keywords
+	-data corpus is well structure data
+	-Exact match (no error): Regular or relation algebra expression.
+	-Example: relational database systems
+ Information Retrieval: determine a set of documents which are relevant to the query
+	-Data corpus is no always well structured
+	-Proximity match (inaccurate and small error): documents that are probably match the user’s information
+	 need
+	-Interpret documents: extracting syntactic and semantic information
+
+Keyword Search
+ -Simplest notion of relevance is that the query string appears verbatim in the document
+ -Slightly less strict notion is that the words in thequery appear frequently in the document, in any
+  order (bag of words)
+
+Intelligent IR 
+ -meaning of the words used.
+ -order of words in the query.
+ -Adapting to the user based on direct or indirect feedback.
+ -authority of the source.
+
+IR vs Database
+ Structured vs unstructured data
+	-Structured data tends to refer to information in “tables”
+ Unstructured data
+	-Typically refers to free text
+	-Allows
+	-Keyword queries including operators
+	-More sophisticated “concept” queries e.g.,
+	-find all web pages dealing with drug abuse
+	-Classic model for searching text documents
+ Semi-structured data
+	-In fact almost no data is “unstructured”
+	-E.g., this slide has distinctly identified zones such as the Title and Bullets
+ Facilitates “semi-structured” search such as
+	-Title contains data AND Bullets contain search
+ Or even
+	-Title is about Object Oriented Programming AND Author something like stro*rup
+	-where * is the wild-card operator
+
+Past, Present, and Future
+ -Developments
+ 	-TOC: table of contents
+ 	-Index: subjects, glossary, thesaurus
+ 	-Library: hierarchical categorization of indexes
+ 	-Automatic indexes
+ -Computer-centered view
+ 	-Performance & Quality
+ 		-efficient index and precise retrieval
+ -Human-centered view
+ 	-Understanding user’s information needs
+		-Guide the user to find (browse) useful information
+ -An example: Web Portal Sites
+
+The Retrieval Process
+ -Document Operation
+	-Document → Text Operation → Text Model (Logical View of Document)
+ -Index: Inverted File
+	-Index once and Retrieve many time (for queries)
+	-Time and storage space
+ -Query Operation
+	-Regard the query as a short document text
+	-Similar to text operation
+	-Ranking: Relevance score (similarity)
+	-Relevance Feedback
+
+How good are the retrieved docs?
+ -Precision : Fraction of retrieved docs that are relevant to the
+  user’s information need
+ -Recall : Fraction of relevant docs in collection that are retrieved
+ -More precise definitions and measurements to follow later
+
+IR Processes
+ -มีขั้นตอนหลักๆ5ขั้นตอน
+	1.การทำดัชนี(Indexing):เป็นการสร้างตัวเเทนเอกสาร
+	2.การจัดรูปแบบสอบถาม (Query Formulation) : เป็นการสร้างตัวแทนคำสอบถาม
+	3.การเทียบเคียงจับคู่(matching):เป็นการจับคู่ระหว่างตัวแทนคำสอบถามกับตัวเอกสาร
+	4.การเลือก (Selection) รายการผลลัพธ์ที่ตรงประเด็น
+	5.การปรับเปลี่ยนคำสอบถามใหม่(Query Reformulation)ในรอบถัดไป
+
+

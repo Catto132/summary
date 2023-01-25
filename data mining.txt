@@ -1,0 +1,78 @@
+
+  _____        _          __  __ _       _               
+ |  __ \      | |        |  \/  (_)     (_)              
+ | |  | | __ _| |_ __ _  | \  / |_ _ __  _ _ __   __ _   
+ | |  | |/ _` | __/ _` | | |\/| | | '_ \| | '_ \ / _` |  
+ | |__| | (_| | || (_| | | |  | | | | | | | | | | (_| |_ 
+ |_____/ \__,_|\__\__,_| |_|  |_|_|_| |_|_|_| |_|\__, (_)
+                                                  __/ |  
+                                                 |___/   
+1300-1700 อังคารบ่าย
+------------------------------------------------------------------------------------------------------------------------------------
+24/01/66-----------------------------------------------------------------------------------------------
+*will find in data science certificate test*
+**Slide url(https://drive.google.com/file/d/1FckezvX9rmV_4KO8fygkTJYVqtR8EEdt/view)**
+Terminology.
+	-หน่วยวัดผล(Measurement) - aggrigate function(sum,max,mix,percentile,count,group,filter) use to ???
+	-Dimension Table - have primary key.
+	-Fact Table - Store foreigh Key.
+
+From DBMS to decision support
+	-DBMSs widely used to maintain transactions data.
+	-Attemppts to use of these data for analysis, exploration,identification of trends etc. has led to Decision Support Systems.
+	-Papid Growth since mid 70's.
+	-DBMSs vendors have answered this trend by adding new features to existing product.
+	-Rarely enough.
+	-Trend forwards data warehouse.
+	-Datat warehousing - consolidation of data from several databse which are in turn maintained by individual business units
+	 along with historical and summary information.
+
+Characteristics of TPS
+	+--------------------------+----------------+
+	|charcateristic			|OLTP 		|
+	|Typical operation 		|update		|
+	|Level of analythical		|Low 			|
+	|Screens				|unchanging	|
+	|Amount of data transfer	|small		|
+	|Data level			|Detailed 		|
+	|Age od data			|current		|
+	|Orientation 			|Records		|
+	+--------------------------+----------------+
+MIS and Decision support
+	/-------------------\
+	|Production platform|	<--------ad hoc access------+
+	\-------------------/						 |
+			|						+---------------------+
+			|						|	Decision maker	|
+			|						+---------------------+
+			|							 A
+			+------operational report--------------+
+	-MIS systems provided business data.
+	-Report were develop on request.
+	-Reports provided littel analysis capability.
+	-no personal ad hco access to data.
+(just read slide ffs. too many photo can't explain)
+
+Data quality issue
+	-No common time basis
+	-Different calculation algorithms
+	-Different levels of extraction
+	-Different levels of granularity
+	-Different data field names
+	-Different data field meanings
+	-Missing information
+	-No data correction rules
+	-No drill-down capability
+
+Data warehouse architect
+	+---------------------+							+----------------+				+----------------+
+	|External Data Source	|	--Extract Clean,Transfrom,-> 	|Meta Repository	|	--Serves->		|Visualization	|
+	|Operational Database	|	  Load,Refresh				|Data Warehouse	|				|OLAP			|
+	+---------------------+							+----------------+				|Data Mining	|
+																			+----------------+
+Centralized data warehouse
+federated data warehouse 
+tiered data warehouse
+(go see in slide https://drive.google.com/file/d/1FckezvX9rmV_4KO8fygkTJYVqtR8EEdt/view)
+
+
