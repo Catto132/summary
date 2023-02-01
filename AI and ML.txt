@@ -21,20 +21,20 @@ What does Digital revolution mean?
 first revolution 
 The agricultural Revolution. (10000-3000Years ago)
 	human start to planting plant and hearding animal instead of hunting and gathering. and start to settle and build city instead of moving after resources scarce
-	with people come trading, law and order and currency
+	with people come trading, law & order and currency.
 
 Second revolution
 The Industrial Revolution (200-300years ago)
-	start at britain human start to produce machine to help with production start with steam engine. machine change the way we produce items not relie of weather and can produce more than ever 
-	and start to store items in warehouse and selling thing in large scale whixh is require calculation and so the computing start to stand ground.
+	start at britain human beginning to produce machine to help with production start with steam engine. machine change the way we produce items not relie on weather and can produce more than ever
+	and start to store items in warehouse and selling thing in large scale which require calculation and so the computing start to stand ground.
 
-early computer 
+Early computer 
 Analog
 |	The vacuum tube system (1946)
-|	 in the bulb have 2 state 1.On 2.off to store data.
+|	 in the bulb have 2 state 1.On 0.off to store data.
 |	The binary system
 |	 -no comment-
-(lightbulb produce heat and can failed when the lighbulb severe from heat and produce error because severe buld have value 0)
+(lightbulb produce heat and can failed when the lightbulb severe from heat and produce error because severe bulb have value 0)
 
 Digital
 |	The transistor (50-60years ago)
@@ -49,11 +49,81 @@ Digital
 |	 -GPU have a lot of core and produce less accurate but calculate more value and faster than CPU.
 |
 
+25/01/66---------------------------------------------------------------
+Period 2 : Data science, Artificial intelligent and machine learning.
+neural network is lije human brain we recognize image and by connect algorithm together but with more than one neural network we called it multi-layer neural network.
+Artificial intellignet & machine learning concept.
+	-Train AI with Data.
+	-computer creates algorithm.
+		-with help from humans (Supervised or semi-supervised machine learning)
+		-Independently(Unsuoervised  Machine learning)
+
+software Development
+ 1.Developing an algorithm
+ 2.Implementing an algorithm
+ 3.usage
+PIN:Personal Identification Number.
 
 
+Artificial intelligent characteristics
+	-Intelligent behaviour - can solve problem with their own knwledge.
+	-Act and learn Autonomously - can do and learn something by it self without human assist.
+	-Take Data,apply algorithm and predicting outcome - take data use algorithm and predict outcome from current data.
+ example:
+	A machine that Percieves it environment and take action that maximize it Chance of successfully archiving it goal.
+
+Modern AI 
+ -Train with data - train with data relate to topic.
+ -Feature extraction - extract feature and produce filter from data.
+ -Model Development - develop model from filter to create algorithm.
+ -Prediction Machine.
+ 
+traditional programming
+ Rules+Data   = answer
+Machine learning approach
+ Data+answers = Rules
+
+01/02/65--------------------------------------------------------------
+Data
+ training the machine
+			prepared data
+		v----------|---------v
+	training data		test data
+	+-------------------------------------+
+	| Model learning 	model	validation |
+	+---------machine learning------------+
+
+type of training 
+Supervised learning
+ -Known Examples
+ -Pattern Extraction(if not appear in training data it cant predict the closet one)
+ -Repeatable Outcome
+
+Known Input-output Combination
+ input-independent variable(x)
+ output-dependent variable(y)
+
+type of supervised learning algorithm
+ -regression
+ -classification
+
+unsupervised learning
+ -output variables are unlabled.
+ -Combination of input and output variable arent known.
+ -analyzing relationship input variable and uncovering hidden pattern .
+ -create new label from pattern.
+input raw data -> interpolation -> algorithm -> processing -> output
+(unlabeled data)
+
+type of unsupervised learning.
+ -clustering.
+ -association.
+
+Big data and analytics
+ 3 big V
+  Volume
+  Variety
+  Velocity
 
 
-
-
-	 
-
+ 
