@@ -125,5 +125,75 @@ Big data and analytics
   Variety
   Velocity
 
+22/02/66-------------------------------------------------------------------------------------------------
+Machine Learning Algorithm.
 
- 
+-Linear regression.
+//data usually represent in 2d graph contain only x,y axis.
+ -supervised learning algorithm.
+ -Predictino an Unknown variable.
+  -using the known result.
+  
+The slope 
+-calculate by reference the hyperplane.
+
+formular: 
+	y=bx+a
+	A=จุดที่hyperplaneตัดดกับแกนY
+	B=ความลาดชันของslope
+
+multiple linear regression.
+//data will be represent in plane/3d graph contain x,y,z axis.
+
+formular:
+	y=a+b1x1+b2x2+b3x3...+bnxn
+
+
+01/03/22-------------------------------------------------------------------------------------------------
+Discrete variable.
+ -category Variables, i.e. gender, must be expressed using one-hot encoding.(0 or 1)
+ -relavant
+ -Posses some correlation /linear relationship between independant variables and dependant variable,
+ -More relationships to consider
+
+one to one
+X -----> Y
+many-to-one
+  x-
+ /| \
+x-+----->Y
+ \| /
+  x-
+heat mao with 3 variable
+1  perfect Positive relationship
+-1 Perfect Negative relationship
+0 no relationship
+
+Algorithm
+-logistic regression
+  -supervised Learning Technique.
+  -Qualitative Prediction. (quality predict thing such as dog and cat that require quality | Quantity predict set of value such as bmi predictin which use lot of record) 
+  -Categorical variable.
+  -Classification fraud detection
+
+sigmoid function.
+ -s shape curve.
+   probability 
+    -0 no chance.
+    -1 certain.
+   cut-off line to classification data point.
+    -class A (above 0.5)
+    -class B (above 0.5)
+
+Logistical Regression.(only difference is logistical use in quality prediction),(logistic regression do best with only 2 variable.)
+ x = Independant variable
+  -Categorical value
+  -Continuous value
+ -one-hot Encoding for Discrete 
+ y = dependant variable.
+  -Class (output) of the y can be determined by position of the data point in in relation to the decision boundary.
+
+Multinimal Logistic regression.(predict more than 2 things.) 
+
+
+

@@ -114,3 +114,5 @@ IR Processes
 	5.การปรับเปลี่ยนคำสอบถามใหม่(Query Reformulation)ในรอบถัดไป
 
 
+
+
